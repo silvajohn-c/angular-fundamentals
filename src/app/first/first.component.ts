@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FirstService } from './first.service';
 
 @Component({
   selector: 'app-first',
@@ -7,7 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FirstComponent implements OnInit {
 
-  constructor() { }
+  frase: string[] = []
+
+  constructor(private firstService: FirstService) {
+    this.frase = this.firstService.getFrase()
+  }
 
   ngOnInit(): void {
   }

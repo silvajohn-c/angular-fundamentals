@@ -5,5 +5,9 @@ import { Injectable } from '@angular/core';
 })
 export class FirstService {
 
+  getFrase(): string[] {
+    return ["Esse","é","um","teste"]
+  }
+
   constructor() { }
 }
