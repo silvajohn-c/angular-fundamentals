@@ -1,9 +1,44 @@
-<span *ngFor="let word of frase">
-    {{word}}
-</span>
-<article>
-    <img [src]="imgUrl">
-</article>
-<article>
-    {{valor1}} + {{valor2}} = {{valor1 && valor2}}
-</article>
+<br /><br />
+<select #modulo class="form-select" (change)="0">
+  <option disabled selected>-- Selecione um módulo --</option>
+  <option value="1">Property Binding e Interpolação</option>
+  <option value="2">Class e Style Binding</option>
+</select>
+<div [style.display]="modulo.value == '1' ? 'block' : 'none'">
+    <h3>Property Binding e Interpolação</h3>
+    <span *ngFor="let word of frase">
+    {{ word }}
+  </span>
+    <article>
+        <img [src]="imgUrl" />
+    </article>
+    <article>{{ valor1 }} + {{ valor2 }} = {{ valor1 && valor2 }}</article>
+</div>
+<div [style.display]="modulo.value == '2' ? 'block' : 'none'">
+    <h3>Class e Style Binding</h3>
+
+    Selecione uma cor: <br />
+    <select class="form-select" multiple #cor (change)="(0)">
+    <option value="alert-info">Azul</option>
+    <option value="alert-success">Verde</option>
+    <option value="alert-warning">Laranja</option>
+    <option value="alert-danger">Vermelho</option>
+  </select>
+    <br /><br />
+    <p class="{{ cor.value }}" [style.display]="cor.value == 'alert-danger' ? 'block' : 'none'">
+        Erro ao selecionar vermelho
+    </p>
+
+    <div class="alert" role="alert" [class.alert-info]="cor.value == 'alert-info'">
+        Info
+    </div>
+    <div class="alert" role="alert" [class.alert-success]="cor.value == 'alert-success'">
+        Success
+    </div>
+    <div class="alert" role="alert" [class.alert-warning]="cor.value == 'alert-warning'">
+        Warning
+    </div>
+    <div class="alert" role="alert" [class.alert-danger]="cor.value == 'alert-danger'">
+        Danger
+    </div>
+</div>
