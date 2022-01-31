@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EventbindingComponent implements OnInit {
   valorDigitado: string;
+  mouseOver: boolean = false;
 
   constructor() {
     this.valorDigitado = '';
@@ -21,4 +22,9 @@ export class EventbindingComponent implements OnInit {
   getEvento(evento: KeyboardEvent) {
     this.valorDigitado = (<HTMLInputElement>evento.target).value
   }
+
+  onMouseOverOut(){
+    this.mouseOver = !this.mouseOver
+  }
+
 }

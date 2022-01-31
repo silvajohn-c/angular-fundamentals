@@ -1,5 +1,6 @@
 <h3>Event Binding</h3>
-
+<hr>
 <button (click)="btnClicado()" class="btn btn-success">Click Aqui</button>
-
+<hr>
 <input type="text" class="input-group col-3" (keyup)="getEvento($event)"> Digitado: {{valorDigitado}}
+<hr><span (mouseover)="onMouseOverOut()" (mouseout)="onMouseOverOut()" [class.highlight]="mouseOver">Passe o mouse</span>
