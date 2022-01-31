@@ -5,17 +5,17 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FirstModule } from './first/first.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { TwowaydatabindingComponent } from './twowaydatabinding/twowaydatabinding.component';
+import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
-    TwowaydatabindingComponent, 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FirstModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

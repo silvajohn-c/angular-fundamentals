@@ -4,13 +4,15 @@ import { FirstComponent } from './first.component';
 import { ClassbindingComponent } from '../classbinding/classbinding.component';
 import { PropertybindingComponent } from '../propertybinding/propertybinding.component';
 import { EventbindingComponent } from '../eventbinding/eventbinding.component';
+import { TwowaydatabindingComponent } from '../twowaydatabinding/twowaydatabinding.component';
 
 @NgModule({
   declarations: [
     FirstComponent,
     ClassbindingComponent,
     PropertybindingComponent,
-    EventbindingComponent
+    EventbindingComponent,
+    TwowaydatabindingComponent
   ],
   imports: [
     CommonModule
