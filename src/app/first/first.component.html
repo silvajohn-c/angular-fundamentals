@@ -1,9 +1,11 @@
 <select #modulo class="form-select" (change)="0">
-  <option disabled selected>-- Selecione um módulo --</option>
+  <option disabled>-- Selecione um módulo --</option>
   <option value="1">Property Binding e Interpolação</option>
   <option value="2">Class e Style Binding</option>
   <option value="3">Event Binding</option>
+  <option value="4" selected>Two-Way Data Binding</option>
 </select>
 <app-propertybinding [style.display]="modulo.value == '1' ? 'block' : 'none'"></app-propertybinding>
 <app-classbinding [style.display]="modulo.value == '2' ? 'block' : 'none'"></app-classbinding>
 <app-eventbinding [style.display]="modulo.value == '3' ? 'block' : 'none'"></app-eventbinding>
+<app-twowaydatabinding [style.display]="modulo.value == '4' ? 'block' : 'none'"></app-twowaydatabinding>

@@ -7,6 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TwowaydatabindingComponent implements OnInit {
 
+  pessoa: any = {
+    nome: 'John',
+    idade: '30'
+  }
+
+  teste: string = 'olá'
+
   constructor() { }
 
   ngOnInit(): void {
