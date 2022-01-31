@@ -5,6 +5,7 @@ import { ClassbindingComponent } from '../classbinding/classbinding.component';
 import { PropertybindingComponent } from '../propertybinding/propertybinding.component';
 import { EventbindingComponent } from '../eventbinding/eventbinding.component';
 import { TwowaydatabindingComponent } from '../twowaydatabinding/twowaydatabinding.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { TwowaydatabindingComponent } from '../twowaydatabinding/twowaydatabindi
     TwowaydatabindingComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule
   ],
   exports:[
     FirstComponent
