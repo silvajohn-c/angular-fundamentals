@@ -5,9 +5,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FirstModule } from './first/first.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { TwowaydatabindingComponent } from './twowaydatabinding/twowaydatabinding.component';
 @NgModule({
   declarations: [
-    AppComponent, 
+    AppComponent,
+    TwowaydatabindingComponent, 
   ],
   imports: [
     BrowserModule,
