@@ -6,6 +6,7 @@ import { PropertybindingComponent } from '../propertybinding/propertybinding.com
 import { EventbindingComponent } from '../eventbinding/eventbinding.component';
 import { TwowaydatabindingComponent } from '../twowaydatabinding/twowaydatabinding.component';
 import { FormsModule } from '@angular/forms';
+import { OutputpropertyComponent } from '../outputproperty/outputproperty.component';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { FormsModule } from '@angular/forms';
     ClassbindingComponent,
     PropertybindingComponent,
     EventbindingComponent,
-    TwowaydatabindingComponent
+    TwowaydatabindingComponent,
+    OutputpropertyComponent
   ],
   imports: [
     CommonModule,
