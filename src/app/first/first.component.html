@@ -1,13 +1,13 @@
 <select #modulo class="form-select" (change)="0">
-  <option disabled>-- Selecione um módulo --</option>
+  <option disabled selected>-- Selecione um módulo --</option>
   <option value="1">Property Binding e Interpolação</option>
   <option value="2">Class e Style Binding</option>
   <option value="3">Event Binding</option>
   <option value="4" >Two-Way Data Binding</option>
-  <option value="5" selected>Output Properties</option>
+  <option value="5">Output Properties</option>
 </select>
-<app-propertybinding [style.display]="modulo.value == '1' ? 'block' : 'none'"></app-propertybinding>
-<app-classbinding [style.display]="modulo.value == '2' ? 'block' : 'none'"></app-classbinding>
-<app-eventbinding [style.display]="modulo.value == '3' ? 'block' : 'none'"></app-eventbinding>
-<app-twowaydatabinding [style.display]="modulo.value == '4' ? 'block' : 'none'"></app-twowaydatabinding>
-<contador (mudouValor)="onMudouValor($event)" [valor]="valorInicial" [style.display]="modulo.value == '5' ? 'block' : 'none'"></contador>
+<app-propertybinding *ngIf="modulo.value == '1'"></app-propertybinding>
+<app-classbinding *ngIf="modulo.value == '2'"></app-classbinding>
+<app-eventbinding *ngIf="modulo.value == '3'"></app-eventbinding>
+<app-twowaydatabinding *ngIf="modulo.value == '4'"></app-twowaydatabinding>
+<contador *ngIf="modulo.value == '5'" (mudouValor)="onMudouValor($event)" [valor]="valorInicial"></contador>
