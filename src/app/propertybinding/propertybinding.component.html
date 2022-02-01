@@ -1,8 +1,15 @@
 <h3>Property Binding e Interpolação</h3>
-<span *ngFor="let word of frase">
-{{ word }}
-</span>
+<hr>
+<article>
+    <span *ngFor="let word of frase">
+        {{ word }}
+        </span>
+</article>
+
 <article>
     <img [src]="imgUrl" />
 </article>
-<article>{{ valor1 }} + {{ valor2 }} = {{ valor1 && valor2 }}</article>
+
+<article>
+    {{ valor1 }} + {{ valor2 }} = {{ valor1 && valor2 }}
+</article>

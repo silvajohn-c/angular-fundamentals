@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
 })
 export class PropertybindingService {
 	getFrase(): string[] {
-		return [ 'Esse', 'é', 'um', 'teste' ];
+		return [ 'Esse', 'é', 'um', 'teste:' ];
 	}
 
 	imgUrl: string = 'https://picsum.photos/300/200';
